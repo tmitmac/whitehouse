@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Administration | The White House</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --navy: #0a1f44;
+      --light: #ffffff;
+      --offwhite: #f3f4f6;
+      --dark: #111827;
+      --gray: #4b5563;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    .official-banner {
+      background: var(--navy);
+      color: #e5e7eb;
+      font-size: 0.85rem;
+      padding: 0.4rem 1rem;
+      text-align: center;
+    }
+
+    header {
+      background: var(--navy);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-link {
+      text-decoration: none;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .logo-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    nav a:hover { text-decoration: underline; }
+
+    .page-hero {
+      background: var(--offwhite);
+      padding: 4rem 1.5rem 3rem;
+    }
+
+    .page-hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .page-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--navy);
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    section { margin-bottom: 4rem; }
+
+    section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      color: var(--navy);
+    }
+
+    .admin-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .admin-card {
+      border-top: 3px solid var(--navy);
+      padding-top: 1rem;
+    }
+
+    .admin-photo {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      background: #d1d5db;
+      margin-bottom: 1rem;
+    }
+
+    .admin-card h3 {
+      margin: 0.2rem 0;
+      font-size: 1.1rem;
+    }
+
+    .admin-card span {
+      font-size: 0.85rem;
+      color: var(--gray);
+    }
+
+    footer {
+      background: var(--offwhite);
+      border-top: 1px solid #e5e7eb;
+      padding: 3rem 1.5rem;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+
+    footer h4 { margin-bottom: 0.6rem; }
+
+    footer a {
+      display: block;
+      color: var(--dark);
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    .copyright {
+      text-align: center;
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
+  </style>
+</head>
+<body>
+
+<div class="official-banner">An official website of the Square Country Government</div>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo-link">
+      <div class="logo">
+        <div class="logo-badge">SC</div>
+        <span>The White House</span>
+      </div>
+    </a>
+    <nav>
+      <a href="administration.html">Administration</a>
+      <a href="#">Government</a>
+      <a href="#">Policies</a>
+      <a href="#">Briefings</a>
+      <a href="#">News</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <h1>The Administration</h1>
+    <p>The leadership of the executive branch of the Square Country Government.</p>
+  </div>
+</section>
+
+<main>
+  <section>
+    <h2>Executive Leadership</h2>
+    <div class="admin-grid">
+      <div class="admin-card">
+        <div class="admin-photo"></div>
+        <h3>Prime Minister</h3>
+        <span>Head of Government</span>
+      </div>
+      <div class="admin-card">
+        <div class="admin-photo"></div>
+        <h3>Deputy Prime Minister</h3>
+        <span>Deputy Head of Government</span>
+      </div>
+      <div class="admin-card">
+        <div class="admin-photo"></div>
+        <h3>Chief of Staff</h3>
+        <span>Executive Office</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The Cabinet</h2>
+    <div class="admin-grid">
+      <div class="admin-card">
+        <h3>Minister of Finance</h3>
+        <span>Economic and fiscal policy</span>
+      </div>
+    <div class="admin-card">
+        <h3>Minister of Health & Human Services</h3>
+        <span>Economic and fiscal policy</span>
+      </div>
+    <div class="admin-card">
+        <h3>Minister of Education</h3>
+        <span>Economic and fiscal policy</span>
+      </div>
+        <div class="admin-card">
+        <h3>Minister of Transport & Infrastructure</h3>
+        <span>Transport and development</span>
+      </div>
+    <div class="admin-card">
+        <h3>Minister for the Environment</h3>
+        <span>Transport and development</span>
+      </div>
+      <div class="admin-card">
+        <h3>Minister of Foreign Affairs</h3>
+        <span>International relations</span>
+      </div>
+      <div class="admin-card">
+        <h3>Minister of Defence</h3>
+        <span>National security</span>
+      </div>
+          <div class="admin-card">
+        <h3>Minister of Agriculture</h3>
+        <span>Transport and development</span>
+      </div>
+      <div class="admin-card">
+        <h3>Minister of Technology</h3>
+        <span>Transport and development</span>
+      </div>
+      <div class="admin-card">
+        <h3>Minister of Labour & Employment</h3>
+        <span>Transport and development</span>
+      </div>
+            <div class="admin-card">
+        <h3>Minister of Tourism</h3>
+        <span>Transport and development</span>
+      </div>
+            <div class="admin-card">
+        <h3>Minister of Justice & Corrections</h3>
+        <span>Transport and development</span>
+      </div>
+            <div class="admin-card">
+        <h3>Minister of Immigration & Customs</h3>
+        <span>Transport and development</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h4>The White House</h4>
+      <p>Executive Office of the Prime Minister<br>Square Country Government</p>
+    </div>
+    <div>
+      <h4>Government</h4>
+      <a href="#">The Administration</a>
+      <a href="#">Legislation</a>
+      <a href="#">Departments</a>
+    </div>
+    <div>
+      <h4>Transparency</h4>
+      <a href="#">Press Briefings</a>
+      <a href="#">Official Statements</a>
+      <a href="#">Open Government</a>
+    </div>
+    <div>
+      <h4>Engage</h4>
+      <a href="#">Contact</a>
+      <a href="#">Public Submissions</a>
+      <a href="#">Visit the White House</a>
+    </div>
+  </div>
+  <div class="copyright">© Square Country Government</div>
+</footer>
+
+</body>
+</html>

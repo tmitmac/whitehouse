@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The White House | Square Country Government</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --navy: #0a1f44;
+      --navy-dark: #08172f;
+      --light: #ffffff;
+      --offwhite: #f3f4f6;
+      --dark: #111827;
+      --gray: #4b5563;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.5;
+    }
+
+    /* Official banner */
+    .official-banner {
+      background: var(--navy-dark);
+      color: #e5e7eb;
+      font-size: 0.75rem;
+      padding: 0.45rem 1rem;
+      text-align: center;
+    }
+
+    /* Header */
+    header {
+      background: var(--navy);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-link:hover {
+  opacity: 0.9;
+}
+
+.logo-link:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: white;
+    }
+
+    .logo-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.75rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    nav a:hover { text-decoration: underline; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("images/whitehouse.png") center/cover no-repeat;
+      color: white;
+      padding: 7rem 1.5rem 6rem;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 3.25rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 720px;
+      color: #e5e7eb;
+    }
+
+    /* Main */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem;
+    }
+
+    section { margin-bottom: 4.5rem; }
+
+    section h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 1.25rem;
+    }
+
+    /* Administration grid */
+    .admin-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .admin-card img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+    }
+
+    .admin-card h3 {
+      margin: 0.3rem 0 0.2rem;
+      font-size: 1rem;
+    }
+
+    .admin-card span {
+      font-size: 0.85rem;
+      color: var(--gray);
+    }
+
+    /* Priorities */
+    .priorities {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .priority {
+      background: var(--offwhite);
+      padding: 1.5rem;
+      border-left: 4px solid var(--navy);
+      font-weight: 500;
+    }
+
+    /* News */
+    .news-item {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .news-item span {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--gray);
+      margin-bottom: 0.25rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--offwhite);
+      border-top: 1px solid #e5e7eb;
+      padding: 3.5rem 1.5rem;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2.5rem;
+    }
+
+    footer h4 { margin-bottom: 0.75rem; }
+
+    footer a {
+      display: block;
+      text-decoration: none;
+      color: var(--dark);
+      font-size: 0.85rem;
+      margin-bottom: 0.4rem;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    .copyright {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.75rem;
+      color: var(--gray);
+    }
+  </style>
+</head>
+<body>
+
+<div class="official-banner">An official website of the Executive Branch of the Square Country Government</div>
+
+<header>
+<div class="header-inner">
+  <a href="index.html" class="logo-link">
+    <div class="logo">
+      <div class="logo-badge">SC</div>
+      <span>The White House</span>
+    </div>
+  </a>
+
+    <nav>
+      <a href="#">News</a>
+      <a href="administration.html">Administration</a>
+      <a href="#">Briefings</a>
+      <a href="#">Priorities</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <h1>The White House</h1>
+    <p>Official residence and executive office of the Prime Minister of Square Country and Cabinet</p>
+  </div>
+</section>
+
+<main>
+  <section>
+    <h2>The Administration</h2>
+    <div class="admin-grid">
+      <div class="admin-card">
+        <h3>Prime Minister</h3>
+        <span>Head of Government</span>
+      </div>
+      <div class="admin-card">
+        <h3>Deputy Prime Minister</h3>
+        <span>Deputy Head of Government</span>
+      </div>
+      <div class="admin-card">
+        <h3>The Cabinet</h3>
+        <span>Senior Ministers</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Our Priorities</h2>
+    <div class="priorities">
+      <div class="priority">Economic Stability</div>
+      <div class="priority">National Security</div>
+      <div class="priority">Immigration & Customs</div>
+      <div class="priority">Democratic Institutions</div>
+      <div class="priority">Public Infrastructure</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Latest News</h2>
+    <div class="news-item"><span>Today</span><strong>Prime Minister issues national address</strong></div>
+    <div class="news-item"><span>2 days ago</span><strong>Government releases economic outlook</strong></div>
+    <div class="news-item"><span>1 week ago</span><strong>International leaders welcomed to Square Country</strong></div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h4>The White House</h4>
+      <p>Executive Office of the Prime Minister<br>Square Country Government</p>
+    </div>
+    <div>
+      <h4>Administration</h4>
+      <a href="#">Prime Minister</a>
+      <a href="#">Deputy Prime Minister</a>
+      <a href="#">The Cabinet</a>
+    </div>
+    <div>
+      <h4>Media</h4>
+      <a href="#">Press Briefings</a>
+      <a href="#">Statements</a>
+      <a href="#">Speeches</a>
+    </div>
+    <div>
+      <h4>Get Involved</h4>
+      <a href="#">Contact</a>
+      <a href="#">Public Submissions</a>
+      <a href="#">Visit</a>
+    </div>
+  </div>
+  <div class="copyright">© Square Country Government</div>
+</footer>
+
+</body>
+</html>
