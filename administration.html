@@ -33,8 +33,10 @@
       text-align: center;
     }
 
+    /* Header */
     header {
       background: var(--navy);
+      position: relative;
     }
 
     .header-inner {
@@ -47,19 +49,9 @@
     }
 
     .logo-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.logo-link:hover {
-  opacity: 0.9;
-}
-
-.logo-link:focus {
-  outline: 2px solid #ffffff;
-  outline-offset: 4px;
-  border-radius: 4px;
-}
+      text-decoration: none;
+      color: inherit;
+    }
 
     .logo {
       display: flex;
@@ -83,6 +75,12 @@
       font-weight: 700;
     }
 
+    /* Desktop nav */
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
     nav a {
       color: white;
       text-decoration: none;
@@ -93,6 +91,37 @@
 
     nav a:hover { text-decoration: underline; }
 
+    /* Mobile menu button */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    /* Mobile nav */
+    .mobile-nav {
+      display: none;
+      background: var(--navy);
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .mobile-nav a {
+      display: block;
+      padding: 1rem 1.5rem;
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .mobile-nav a:hover {
+      background: rgba(255,255,255,0.08);
+    }
+
+    /* Page hero */
     .page-hero {
       background: var(--offwhite);
       padding: 4rem 1.5rem 3rem;
@@ -183,11 +212,27 @@
       font-size: 0.8rem;
       color: var(--gray);
     }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .mobile-nav.show {
+        display: block;
+      }
+    }
   </style>
 </head>
 <body>
 
-<div class="official-banner">An official website of the Executive Branch of the Square Country Government
+<div class="official-banner">
+  An official website of the Executive Branch of the Square Country Government
 </div>
 
 <header>
@@ -198,13 +243,24 @@
         <span>The White House</span>
       </div>
     </a>
-     <nav>
+
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+
+    <nav>
       <a href="news.html">News</a>
       <a href="administration.html">Administration</a>
       <a href="#">Briefings</a>
       <a href="#">Priorities</a>
       <a href="#">Contact</a>
     </nav>
+  </div>
+
+  <div class="mobile-nav">
+    <a href="news.html">News</a>
+    <a href="administration.html">Administration</a>
+    <a href="#">Briefings</a>
+    <a href="#">Priorities</a>
+    <a href="#">Contact</a>
   </div>
 </header>
 
@@ -323,6 +379,15 @@
   </div>
   <div class="copyright">© Square Country Government</div>
 </footer>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  toggle.addEventListener('click', () => {
+    mobileNav.classList.toggle('show');
+  });
+</script>
 
 </body>
 </html>
