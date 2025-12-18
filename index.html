@@ -33,27 +33,45 @@
       text-align: center;
     }
 
-    /* Header */
-    header {
-      background: var(--navy);
-    }
-
-    .header-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo-link {
-  text-decoration: none;
-  color: inherit;
+    /* Header base */
+.site-header {
+  background: #0a1f44;
+  position: relative;
 }
 
-.logo-link:hover {
-  opacity: 0.9;
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo-link {
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 600;
+}
+
+.logo-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  color: #0a1f44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
 }
 
 .logo-link:focus {
@@ -62,37 +80,68 @@
   border-radius: 4px;
 }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      color: white;
-    }
+/* Desktop nav */
+.nav-desktop {
+  display: flex;
+}
 
-    .logo-badge {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--navy);
-      font-size: 0.8rem;
-      font-weight: 700;
-    }
+.nav-desktop a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 1.75rem;
-      font-size: 0.85rem;
-      font-weight: 500;
-    }
+.nav-desktop a:hover {
+  text-decoration: underline;
+}
 
-    nav a:hover { text-decoration: underline; }
+/* Mobile toggle button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+/* Mobile nav */
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  background: #0a1f44;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.nav-mobile a {
+  color: white;
+  text-decoration: none;
+  padding: 0.7rem 0;
+  font-size: 1rem;
+}
+
+.nav-mobile a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive rules */
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-mobile.open {
+    display: flex;
+  }
+}
+
 
     /* =====================
        HERO CAROUSEL
@@ -306,24 +355,43 @@
 
 <div class="official-banner">An official website of the Executive Branch of the Square Country Government</div>
 
-<header>
-<div class="header-inner">
-  <a href="index.html" class="logo-link">
-    <div class="logo">
-      <div class="logo-badge">SC</div>
-      <span>The White House</span>
-    </div>
-  </a>
+<header class="site-header">
+  <div class="header-inner">
 
-    <nav>
+    <!-- Logo -->
+    <a href="index.html" class="logo-link">
+      <div class="logo">
+        <div class="logo-badge">SC</div>
+        <span>The White House</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="nav-desktop">
       <a href="news.html">News</a>
       <a href="administration.html">Administration</a>
       <a href="#">Briefings</a>
       <a href="#">Priorities</a>
       <a href="#">Contact</a>
     </nav>
+
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle" aria-label="Open menu">
+      ☰
+    </button>
+
   </div>
+
+  <!-- Mobile Navigation -->
+  <nav class="nav-mobile" id="mobileMenu">
+    <a href="news.html">News</a>
+    <a href="administration.html">Administration</a>
+    <a href="#">Briefings</a>
+    <a href="#">Priorities</a>
+    <a href="#">Contact</a>
+  </nav>
 </header>
+
 
 <section class="hero">
   <div class="hero-slide active" style="background-image:
@@ -425,6 +493,14 @@
 </footer>
 
 <script>
+
+  const toggle = document.querySelector('.menu-toggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  toggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+
   const slides = document.querySelectorAll('.hero-slide');
   const dotsContainer = document.querySelector('.hero-dots');
   let current = 0;
