@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Priorities | The White House</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --navy: #0a1f44;
+      --light: #ffffff;
+      --offwhite: #f3f4f6;
+      --dark: #111827;
+      --gray: #4b5563;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    .official-banner {
+      background: var(--navy);
+      color: #e5e7eb;
+      font-size: 0.85rem;
+      padding: 0.4rem 1rem;
+      text-align: center;
+    }
+
+    header { background: var(--navy); }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-link { text-decoration: none; color: white; display: inline-flex; align-items: center; }
+    .logo { display: flex; align-items: center; gap: 0.6rem; font-weight: 600; }
+    .logo-badge { width: 40px; height: 40px; border-radius: 50%; background: white; color: var(--navy); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
+    nav a { color: white; text-decoration: none; margin-left: 1.5rem; font-size: 0.9rem; font-weight: 500; }
+    nav a:hover { text-decoration: underline; }
+
+    .page-hero {
+      background: var(--offwhite);
+      padding: 4rem 1.5rem 3rem;
+    }
+    .page-hero-inner { max-width: 900px; margin: 0 auto; }
+    .page-hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--navy); }
+    .page-hero p { font-size: 1rem; color: var(--gray); }
+
+    main { max-width: 1200px; margin: 0 auto; padding: 3rem 1.5rem; }
+
+    .priorities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+    }
+
+    .priority-card {
+      background: var(--offwhite);
+      border-left: 4px solid var(--navy);
+      padding: 1.5rem;
+      font-weight: 500;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .priority-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: var(--offwhite);
+      border-top: 1px solid #e5e7eb;
+      padding: 3rem 1.5rem;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+
+    footer h4 { margin-bottom: 0.6rem; }
+
+    footer a {
+      display: block;
+      color: var(--dark);
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    .copyright {
+      text-align: center;
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
+  </style>
+</head>
+<body>
+
+<div class="official-banner">An official website of the Square Country Government</div>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo-link">
+      <div class="logo">
+        <div class="logo-badge">SC</div>
+        <span>The White House</span>
+      </div>
+    </a>
+    <nav>
+      <a href="news.html">News</a>
+      <a href="administration.html">Administration</a>
+      <a href="#">Policies</a>
+      <a href="briefings.html">Briefings</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <h1>Priorities</h1>
+    <p>Key policy priorities guiding the Square Country Government's work for its citizens.</p>
+  </div>
+</section>
+
+<main>
+  <div class="priorities-grid">
+    <div class="priority-card">Economic Stability: Ensuring sustainable growth and fiscal responsibility across the nation.</div>
+    <div class="priority-card">National Security: Protecting the country, its citizens, and interests at home and abroad.</div>
+    <div class="priority-card">Public Infrastructure: Investing in transportation, utilities, and public facilities for all citizens.</div>
+    <div class="priority-card">Education & Workforce: Improving education access, quality, and employment opportunities.</div>
+    <div class="priority-card">Healthcare & Public Safety: Strengthening public health systems and emergency services.</div>
+    <div class="priority-card">Environmental Protection: Implementing sustainable policies to preserve natural resources.</div>
+    <div class="priority-card">Technology & Innovation: Encouraging digital transformation and innovation across sectors.</div>
+    <div class="priority-card">Immigration & Customs: Effective, fair, and secure management of borders and immigration policies.</div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h4>The White House</h4>
+      <p>Executive Office of the Prime Minister<br>Square Country Government</p>
+    </div>
+    <div>
+      <h4>Government</h4>
+      <a href="administration.html">The Administration</a>
+      <a href="#">Legislation</a>
+      <a href="#">Departments</a>
+    </div>
+    <div>
+      <h4>Transparency</h4>
+      <a href="#">Press Briefings</a>
+      <a href="#">Official Statements</a>
+      <a href="#">Open Government</a>
+    </div>
+    <div>
+      <h4>Engage</h4>
+      <a href="#">Contact</a>
+      <a href="#">Public Submissions</a>
+      <a href="#">Visit the White House</a>
+    </div>
+  </div>
+  <div class="copyright">© Square Country Government</div>
+</footer>
+
+</body>
+</html>
